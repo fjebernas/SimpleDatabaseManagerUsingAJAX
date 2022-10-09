@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database and AJAX</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/inputFields.css">
+    <link rel="stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/notification.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>
+            GI DATABASE MANAGER WEB APP
+        </h1>
+    </header>
+    <main>
+        <div id="add-character">
+            <form action="" onsubmit="return false">
+                <span class="input-field">
+                    <label for="">Name:</label>
+                    <input type="text" name="name" id="txtName" required>
+                </span>
+                <span class="input-field">
+                    <label for="ddElement">Element:</label>
+                    <select name="element" id="ddElement">
+                        <option value="Anemo" selected>Anemo</option>
+                        <option value="Geo">Geo</option>
+                        <option value="Pyro">Pyro</option>
+                        <option value="Electro">Electro</option>
+                        <option value="Hydro">Hydro</option>
+                        <option value="Cryo">Cryo</option>
+                        <option value="Dendro">Dendro</option>
+                    </select>
+                </span>
+                <span class="input-field">
+                    <label for="ddRegion">Region:</label>
+                    <select name="region" id="ddRegion">
+                        <option value="Monstadt" selected>Monstadt</option>
+                        <option value="Liyue">Liyue</option>
+                        <option value="Inazuma">Inazuma</option>
+                        <option value="Sumeru">Sumeru</option>
+                    </select>
+                </span>
+                <button type="button" id="btnSubmit">Submit</button>
+            </form>
+        </div>
+        <div class="view">
+            <table id="genshin-table">
+                <tr id="table-header">
+                    <th>Character ID</th>
+                    <th>Name</th>
+                    <th>Element</th>
+                    <th>Region</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <!-- elements with absolute positioning -->
+    <button id="refresh-button">Refresh table</button>
+    <h1 id="notification"></h1>
+    <!-- ============================== -->
+</body>
+</html>

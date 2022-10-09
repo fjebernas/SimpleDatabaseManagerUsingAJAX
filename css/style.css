@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #e4e4e4;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+#add-character {
+    margin: 30px 0;
+}
+
+.input-field {
+    margin-right: 10px;
+}
+
+label {
+    display: inline-block;
+}
+
+#btnSubmit {
+    padding: 2px 10px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table,
+th,
+tr,
+td {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background-color: #fff;
+}
+
+tr th {
+    background-color: rgb(19, 19, 77);
+    color: #fff;
+}
+
+tr:nth-child(even) td {
+    background-color: #e6e6e6;
+}
+
+th,
+tr,
+td {
+    padding: 10px 20px;
+    width: 150px;
+    text-align: center;
+}
+
+#refresh-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border: 4px solid rgba(0, 0, 0, 0.6);
+    font-size: 1.1rem;
+    background-color: rgb(107, 107, 107);
+    color: #fff;
+}
+
+#refresh-button:hover {
+    background-color: rgb(146, 146, 146);
+    color: #fff;
+}
+
+#notification {
+    padding: 10px 20px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: none;
+}
+
+.notification-inserted {
+    background-color: greenyellow;
+    color: darkgreen;
+}
+
+.notification-deleted {
+    background-color: orange;
+    color: darkred;
+}

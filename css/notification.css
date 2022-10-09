@@ -1,0 +1,22 @@
+#notification {
+    padding: 10px 20px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: none;
+}
+
+.notification-inserted {
+    background-color: greenyellow;
+    color: darkgreen;
+}
+
+.notification-deleted {
+    background-color: orange;
+    color: darkred;
+}
+
+.notification-refreshed {
+    background-color: lightskyblue;
+    color: darkblue;
+}
