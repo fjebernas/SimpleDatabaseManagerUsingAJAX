@@ -1,22 +1,31 @@
-#notification {
-    padding: 10px 20px;
+#notifications-container {
     position: absolute;
     top: 20px;
     right: 40px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.notification {
+    padding: 10px 20px;
+    position: relative;
     display: none;
 }
 
-.notification-inserted {
+.inserted {
     background-color: greenyellow;
     color: darkgreen;
 }
 
-.notification-deleted {
+.deleted {
     background-color: orange;
     color: darkred;
 }
 
-.notification-refreshed {
+.refreshed {
     background-color: lightskyblue;
     color: darkblue;
 }

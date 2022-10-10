@@ -7,7 +7,8 @@
 
     $sqlQuery = "INSERT INTO Characters(Name, Element, Region) VALUES(" . '\'' . $name . '\'' . "," . '\'' . $element . '\'' . "," . '\'' . $region . '\'' . ");";
     if ($result = $connection -> query($sqlQuery)) {
-        echo "insert success! this is from insertRow.php";
+        echo 'Query success: ';
+        echo $sqlQuery;
     } else {
         echo "insert epic fail! this is from insert.php";
     }

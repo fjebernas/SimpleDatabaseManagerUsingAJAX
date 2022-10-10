@@ -46,11 +46,6 @@ $(document).ready(function(event){
         });
     });
 
-    $('#refresh-button').click(function(){
-        SetTableData();
-        Notify('refresh');
-    });
-
     function SetTableData() {
         $.ajax({
             url: './php/retrieve.php',
@@ -66,6 +61,11 @@ $(document).ready(function(event){
         });
     }
 
+    $('#refresh-button').click(function(){
+        SetTableData();
+        Notify('refresh');
+    });
+
     function ClearTableData() {
         $("#genshin-table").find("tr:gt(0)").remove();
     }
@@ -77,15 +77,15 @@ $(document).ready(function(event){
     }
 
     function Notify($action) {
+        $notification = '';
         if ($action === 'insert') {
-            $('#notification').removeClass().addClass('notification-inserted').text('Insert success!');
-            $('#notification').fadeIn('fast').delay(2000).fadeOut(500);
+            $notification = "<h1 class='notification inserted'>Insert success!</h1>";
         } else if ($action === 'delete') {
-            $('#notification').removeClass().addClass('notification-deleted').text('Delete success!');
-            $('#notification').fadeIn('fast').delay(2000).fadeOut(500);
+            $notification = "<h1 class='notification deleted'>Delete success!</h1>";
         } else if ($action === 'refresh') {
-            $('#notification').removeClass().addClass('notification-refreshed').text('Table refreshed!');
-            $('#notification').fadeIn('fast').delay(2000).fadeOut(500);
+            $notification = "<h1 class='notification refreshed'>Table refreshed!</h1>";
         }
+        $('#notifications-container').prepend($notification);
+        $('#notifications-container h1:first-child').fadeIn(200).delay(2000).fadeOut('slow');
     }
 });

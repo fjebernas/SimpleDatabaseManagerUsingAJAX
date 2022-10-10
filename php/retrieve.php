@@ -15,7 +15,8 @@
             echo '</tr>';
         }
     } else {
-        // do something if database is empty
+        echo "<tr><td colspan='5'>No data available</td></tr>";
     }
+
     $connection -> close();
 ?>
